@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\extensions\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\extensions\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\middleware\\simplerequestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\middleware\\simplerequestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\extensions\\jwtserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\extensions\\jwtserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\appsettings.json",
+              "RelativeDocumentMoniker": "malharia-back-end\\appsettings.json",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\appsettings.json",
+              "RelativeToolTip": "malharia-back-end\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-13T17:57:09.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JwtServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Extensions\\JwtServiceExtensions.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Extensions\\JwtServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Extensions\\JwtServiceExtensions.cs",
+              "RelativeToolTip": "malharia-back-end\\Extensions\\JwtServiceExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:20:01.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Extensions\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Extensions\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Extensions\\DbInitializer.cs",
+              "RelativeToolTip": "malharia-back-end\\Extensions\\DbInitializer.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAYwCMAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:14:41.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Models\\User.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Models\\User.cs",
+              "RelativeToolTip": "malharia-back-end\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:14:29.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "malharia-back-end\\Controllers\\PedidoController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:14:02.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Dtos\\LoginDto.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Dtos\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Dtos\\LoginDto.cs",
+              "RelativeToolTip": "malharia-back-end\\Dtos\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:02:15.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Services\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Services\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Services\\Services\\UserService.cs",
+              "RelativeToolTip": "malharia-back-end\\Services\\Services\\UserService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAYwDIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T16:57:22.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "malharia-back-end\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAA4wDUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:37:41.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "malharia-back-end\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAIwCoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:00:36.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Program.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Program.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Program.cs",
+              "RelativeToolTip": "malharia-back-end\\Program.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T16:53:41.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SimpleRequestLoggingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Middleware\\SimpleRequestLoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Middleware\\SimpleRequestLoggingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Middleware\\SimpleRequestLoggingMiddleware.cs",
+              "RelativeToolTip": "malharia-back-end\\Middleware\\SimpleRequestLoggingMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:27:59.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "malharia-back-end\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T16:56:25.374Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
