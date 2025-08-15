@@ -1,4 +1,5 @@
 ﻿using malharia_back_end.Data;
+using malharia_back_end.Models;
 using malharia_back_end.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -68,6 +69,102 @@ namespace malharia_back_end.Services.Services
 				return "ERROR_UNEXPECTED";
 			}
 		}
+
+		public async Task RegisterAsync(string nome, string email, string password)
+		{
+			try
+			{
+				if (await _db.Users.AnyAsync(u => u.Email == email))
+					throw new Exception("Email já cadastrado.");
+
+				var user = new User
+				{
+					Nome = nome,
+					Email = email,
+					PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
+					Role = "User",
+					IsApproved = false
+				};
+
+				_db.Users.Add(user);
+				await _db.SaveChangesAsync();
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao registrar usuário {Email}", email);
+				throw; // relança para o controller tratar
+			}
+		}
+
+		public async Task ChangePasswordAsync(int userId, string newPassword)
+		{
+			try
+			{
+				var user = await _db.Users.FindAsync(userId)
+						   ?? throw new Exception("Usuário não encontrado.");
+
+				user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(newPassword);
+				await _db.SaveChangesAsync();
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao alterar senha do usuário ID {UserId}", userId);
+				throw; // relança para o controller tratar
+			}
+		}
+
+		public async Task<IEnumerable<User>> GetPendingUsersAsync()
+		{
+			try
+			{
+				var users = await Task.FromResult(_db.Users.Where(u => !u.IsApproved).AsEnumerable());
+				return users;
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao buscar usuários pendentes");
+				throw; // relança para o controller tratar
+			}
+		}
+
+		public async Task ApproveUserAsync(int userId)
+		{
+			try
+			{
+				var user = await _db.Users.FindAsync(userId)
+						   ?? throw new Exception("Usuário não existe.");
+
+				user.IsApproved = true;
+				await _db.SaveChangesAsync();
+
+				Log.Information("Usuário ID {UserId} aprovado com sucesso", userId);
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao aprovar usuário ID {UserId}", userId);
+				throw; // relança para o controller tratar
+			}
+		}
+
+		public async Task DeleteUserAsync(int userId)
+		{
+			try
+			{
+				var user = await _db.Users.FindAsync(userId)
+						   ?? throw new Exception("Usuário não encontrado.");
+
+				_db.Users.Remove(user);
+				await _db.SaveChangesAsync();
+
+				Log.Information("Usuário ID {UserId} removido com sucesso", userId);
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao remover usuário ID {UserId}", userId);
+				throw; // relança para o controller tratar
+			}
+		}
+
 
 	}
 }

@@ -1,12 +1,14 @@
-﻿using malharia_back_end.Dtos;
+﻿using malharia_back_end.Dtos.UserDtos;
 using malharia_back_end.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using System.Security.Claims;
 
 namespace malharia_back_end.Controllers
 {
-	[Route("api/[controller]")]
+    [Route("api/[controller]")]
 	[ApiController]
 	public class AuthController : ControllerBase
 	{
@@ -48,5 +50,71 @@ namespace malharia_back_end.Controllers
 			}
 		}
 
+		[HttpPost("register")]
+		public async Task<IActionResult> Register([FromBody] RegisterDto dto)
+		{
+			try
+			{
+				await _svc.RegisterAsync(dto.Nome, dto.Email, dto.Password);
+
+				return Ok(new
+				{
+					success = true,
+					message = "Registrado. Aguarde aprovação do admin.",
+					data = (object?)null
+				});
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao registrar usuário {Email}", dto.Email);
+
+				return StatusCode(500, new
+				{
+					success = false,
+					message = "Ocorreu um erro inesperado no servidor.",
+					details = ex.Message,
+					data = (object?)null
+				});
+			}
+		}
+
+		[Authorize]
+		[HttpPut("password")]
+		public async Task<IActionResult> ChangeOwnPassword(ChangePasswordDto dto)
+		{
+			var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+			var userEmail = User.FindFirst(ClaimTypes.Email)?.Value ?? "Email-Não-Informado";
+
+			try
+			{
+				Log.Information("Usuário {UserEmail} (ID: {UserId}) iniciou alteração de senha", userEmail, userId);
+
+				await _svc.ChangePasswordAsync(userId, dto.NewPassword);
+
+				Log.Information("Senha alterada com sucesso para {UserEmail}", userEmail);
+
+				return Ok(new
+				{
+					success = true,
+					message = "Senha alterada com sucesso.",
+					data = (object?)null
+				});
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao alterar senha do usuário {UserEmail} (ID: {UserId})", userEmail, userId);
+
+				return StatusCode(500, new
+				{
+					success = false,
+					message = "Ocorreu um erro ao alterar a senha.",
+					details = ex.Message,
+					data = (object?)null
+				});
+			}
+		}
 	}
+
+
+
 }

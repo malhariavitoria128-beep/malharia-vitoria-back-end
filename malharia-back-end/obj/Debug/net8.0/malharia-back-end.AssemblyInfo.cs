@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("malharia-back-end")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+807b557287b45185e0045688cde1fa793e7bbd4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("malharia-back-end")]
 [assembly: System.Reflection.AssemblyTitleAttribute("malharia-back-end")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

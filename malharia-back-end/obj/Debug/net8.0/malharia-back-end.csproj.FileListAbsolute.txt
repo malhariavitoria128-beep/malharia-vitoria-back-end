@@ -128,3 +128,4 @@ C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debu
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.pdb
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.genruntimeconfig.cache
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\ref\malharia-back-end.dll
+C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.sourcelink.json

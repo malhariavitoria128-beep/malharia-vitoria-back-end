@@ -20,6 +20,7 @@ namespace malharia_back_end.Static
 				{
 					db.Users.Add(new User
 					{
+						Nome = "superusuario",
 						Email = "admin@local",
 						PasswordHash = BCrypt.Net.BCrypt.HashPassword("Admin@123"),
 						Role = "Admin",
@@ -32,6 +33,7 @@ namespace malharia_back_end.Static
 				{
 					db.Users.Add(new User
 					{
+						Nome = "operador",
 						Email = "user@local",
 						PasswordHash = BCrypt.Net.BCrypt.HashPassword("User@123"),
 						Role = "User",
