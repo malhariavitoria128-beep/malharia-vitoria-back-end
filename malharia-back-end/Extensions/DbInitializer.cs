@@ -16,27 +16,27 @@ namespace malharia_back_end.Static
 
 				db.Database.Migrate();
 
-				if (!db.Users.Any(u => u.Role == "Admin"))
+				if (!db.Users.Any(u => u.Role == "Administrador"))
 				{
 					db.Users.Add(new User
 					{
 						Nome = "superusuario",
 						Email = "admin@local",
 						PasswordHash = BCrypt.Net.BCrypt.HashPassword("Admin@123"),
-						Role = "Admin",
+						Role = "Administrador",
 						IsApproved = true
 					});
 				}
 
 				// Cria User se não existir
-				if (!db.Users.Any(u => u.Role == "User"))
+				if (!db.Users.Any(u => u.Role == "Operador"))
 				{
 					db.Users.Add(new User
 					{
 						Nome = "operador",
 						Email = "user@local",
 						PasswordHash = BCrypt.Net.BCrypt.HashPassword("User@123"),
-						Role = "User",
+						Role = "Operador",
 						IsApproved = true
 					});
 				}

@@ -71,7 +71,7 @@ namespace malharia_back_end.Controllers
 				return StatusCode(500, new
 				{
 					success = false,
-					message = "Ocorreu um erro inesperado no servidor.",
+					message = ex.Message,
 					details = ex.Message,
 					data = (object?)null
 				});

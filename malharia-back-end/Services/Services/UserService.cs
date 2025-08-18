@@ -82,8 +82,34 @@ namespace malharia_back_end.Services.Services
 					Nome = nome,
 					Email = email,
 					PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
-					Role = "User",
+					Role = "Operador",
 					IsApproved = false
+				};
+
+				_db.Users.Add(user);
+				await _db.SaveChangesAsync();
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao registrar usuário {Email}", email);
+				throw; // relança para o controller tratar
+			}
+		}
+
+		public async Task RegisterAdminAsync(string nome, string email)
+		{
+			try
+			{
+				if (await _db.Users.AnyAsync(u => u.Email == email))
+					throw new Exception("Email já cadastrado.");
+
+				var user = new User
+				{
+					Nome = nome,
+					Email = email,
+					PasswordHash = BCrypt.Net.BCrypt.HashPassword("123456"),
+					Role = "Operador",
+					IsApproved = true
 				};
 
 				_db.Users.Add(user);
@@ -113,6 +139,29 @@ namespace malharia_back_end.Services.Services
 			}
 		}
 
+		public async Task ChangeRoleAsync(int userId, string role)
+		{
+			try
+			{
+				var user = await _db.Users.FindAsync(userId)
+						   ?? throw new Exception("Usuário não encontrado.");
+
+				// Bloquear superusuário
+				if (user.Email == "admin@local")
+					throw new Exception("Não é permitido alterar a role do superusuário.");
+
+				user.Role = role;
+				await _db.SaveChangesAsync();
+
+				Log.Information("Role alterada com sucesso para {UserId}", userId);
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao alterar nível do usuário ID {UserId}", userId);
+				throw; // relança para o controller tratar
+			}
+		}
+
 		public async Task<IEnumerable<User>> GetPendingUsersAsync()
 		{
 			try
@@ -123,6 +172,34 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao buscar usuários pendentes");
+				throw; // relança para o controller tratar
+			}
+		}
+
+		public async Task<IEnumerable<User>> GetApprovedUsersAsync()
+		{
+			try
+			{
+				var users = await Task.FromResult(_db.Users.Where(u => u.IsApproved).AsEnumerable());
+				return users;
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao buscar usuários aprovados");
+				throw; // relança para o controller tratar
+			}
+		}
+
+		public async Task<IEnumerable<User>> GetAllUsersAsync()
+		{
+			try
+			{
+				var users = await Task.FromResult(_db.Users.AsEnumerable());
+				return users;
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao buscar usuários");
 				throw; // relança para o controller tratar
 			}
 		}
@@ -153,6 +230,10 @@ namespace malharia_back_end.Services.Services
 				var user = await _db.Users.FindAsync(userId)
 						   ?? throw new Exception("Usuário não encontrado.");
 
+				// Bloquear superusuário
+				if (user.Email == "admin@local")
+					throw new Exception("Não é permitido deletar o superusuário.");
+
 				_db.Users.Remove(user);
 				await _db.SaveChangesAsync();
 
@@ -164,6 +245,7 @@ namespace malharia_back_end.Services.Services
 				throw; // relança para o controller tratar
 			}
 		}
+
 
 
 	}

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace malharia_back_end.Controllers
 {
-	[Authorize(Roles = "Admin,User")]
+	[Authorize(Roles = "Administrador,Operador")]
 	[ApiController]
 	[Route("api/[controller]")]
 	public class PedidoController : ControllerBase

@@ -1,12 +1,13 @@
-﻿using malharia_back_end.Services.Interfaces;
+﻿using malharia_back_end.Dtos.UserDtos;
+using malharia_back_end.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using System.Security.Claims;
 
 namespace malharia_back_end.Controllers
 {
-	[Authorize(Roles = "Admin")]
+	[Authorize(Roles = "Administrador")]
 	[Route("api/[controller]")]
 	[ApiController]
 	public class AdminController : ControllerBase
@@ -25,7 +26,7 @@ namespace malharia_back_end.Controllers
 
 				Log.Information("Busca por usuários pendentes finalizada. Total: {Count}", list.Count());
 
-				return Ok(list.Select(u => new { u.UserId, u.Email, u.CreatedAt }));
+				return Ok(list.Select(u => new { u.UserId, u.Email, u.CreatedAt, u.Nome, u.Role, u.IsApproved }));
 			}
 			catch (Exception ex)
 			{
@@ -35,6 +36,60 @@ namespace malharia_back_end.Controllers
 				{
 					success = false,
 					message = "Ocorreu um erro ao buscar usuários pendentes.",
+					details = ex.Message,
+					data = (object?)null
+				});
+			}
+		}
+
+		[HttpGet("approved")]
+		public async Task<IActionResult> GetApproved()
+		{
+			try
+			{
+				Log.Information("Iniciando busca por usuários aprovados");
+
+				var list = await _svc.GetApprovedUsersAsync();
+
+				Log.Information("Busca por usuários aprovados finalizada. Total: {Count}", list.Count());
+
+				return Ok(list.Select(u => new { u.UserId, u.Email, u.CreatedAt, u.Nome, u.Role, u.IsApproved }));
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao buscar usuários aprovados");
+
+				return StatusCode(500, new
+				{
+					success = false,
+					message = "Ocorreu um erro ao buscar usuários aprovados.",
+					details = ex.Message,
+					data = (object?)null
+				});
+			}
+		}
+
+		[HttpGet("all")]
+		public async Task<IActionResult> GetAll()
+		{
+			try
+			{
+				Log.Information("Iniciando busca por todos usuários");
+
+				var list = await _svc.GetAllUsersAsync();
+
+				Log.Information("Busca por usuários finalizada. Total: {Count}", list.Count());
+
+				return Ok(list.Select(u => new { u.UserId, u.Email, u.CreatedAt, u.Nome, u.Role, u.IsApproved }));
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao buscar usuários");
+
+				return StatusCode(500, new
+				{
+					success = false,
+					message = "Ocorreu um erro ao buscar usuários.",
 					details = ex.Message,
 					data = (object?)null
 				});
@@ -51,7 +106,12 @@ namespace malharia_back_end.Controllers
 				await _svc.ApproveUserAsync(id);
 
 				Log.Information("Aprovação concluída para usuário ID {UserId}", id);
-				return NoContent();
+				return Ok(new
+				{
+					success = true,
+					message = "Usuário aprovado com sucesso.",
+					userId = id
+				});
 			}
 			catch (Exception ex)
 			{
@@ -76,7 +136,12 @@ namespace malharia_back_end.Controllers
 				await _svc.DeleteUserAsync(id);
 
 				Log.Information("Usuário ID {UserId} removido com sucesso", id);
-				return NoContent();
+				return Ok(new
+				{
+					success = true,
+					message = "Usuário removido com sucesso.",
+					userId = id
+				});
 			}
 			catch (Exception ex)
 			{
@@ -84,7 +149,70 @@ namespace malharia_back_end.Controllers
 				return StatusCode(500, new
 				{
 					success = false,
-					message = "Ocorreu um erro ao remover o usuário.",
+					message = ex.Message,
+					details = ex.Message,
+					data = (object?)null
+				});
+			}
+		}
+
+		[HttpPost("register-by-admin")]
+		public async Task<IActionResult> RegisterByAdmin([FromBody] RegisterByAdminDto dto)
+		{
+			try
+			{
+				await _svc.RegisterAdminAsync(dto.Nome, dto.Email);
+
+				return Ok(new
+				{
+					success = true,
+					message = "Registrado, senha inicial 123456",
+					data = (object?)null
+				});
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao registrar usuário {Email}", dto.Email);
+
+				return StatusCode(500, new
+				{
+					success = false,
+					message = "Ocorreu um erro inesperado no servidor.",
+					details = ex.Message,
+					data = (object?)null
+				});
+			}
+		}
+
+		[HttpPut("change-role")]
+		public async Task<IActionResult> ChangeRole(string role, int id)
+		{
+			var userId = id;
+			var rolenewRole = role;
+			
+			try
+			{
+				Log.Information("Usuário {UserEmail} (ID: {UserId}) iniciou alteração de senha", userId);
+
+				await _svc.ChangeRoleAsync(userId, role);
+
+				Log.Information("Senha alterada com sucesso para {UserId}", userId);
+
+				return Ok(new
+				{
+					success = true,
+					message = "Nível alterado com sucesso.",
+					data = (object?)null
+				});
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Erro ao alterar nível do usuário (ID: {UserId})", userId);
+
+				return StatusCode(500, new
+				{
+					success = false,
+					message = ex.Message,
 					details = ex.Message,
 					data = (object?)null
 				});

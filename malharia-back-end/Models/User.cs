@@ -6,7 +6,7 @@
 		public string Nome { get; set; } = null!;
 		public string Email { get; set; } = null!;
 		public string PasswordHash { get; set; } = null!;
-		public string Role { get; set; } = "User";
+		public string Role { get; set; } = "Operador";
 		public bool IsApproved { get; set; } = false;
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 	}
