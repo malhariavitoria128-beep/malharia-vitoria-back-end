@@ -31,15 +31,12 @@ namespace malharia_back_end.Controllers
 				if (result == "ERROR_NOT_APPROVED")
 					return Unauthorized(new { success = false, message = "Usuário não aprovado.", data = (object?)null });
 
-				// Sucesso
 				return Ok(new { success = true, token = result });
 			}
 			catch (Exception ex)
 			{
-				// Log centralizado, ex: Serilog
 				Log.Error(ex, "Erro ao autenticar usuário {Email}", dto.Email);
 
-				// Retorna erro consistente para o front
 				return StatusCode(500, new
 				{
 					success = false,
@@ -114,7 +111,5 @@ namespace malharia_back_end.Controllers
 			}
 		}
 	}
-
-
 
 }

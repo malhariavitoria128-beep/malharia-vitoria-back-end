@@ -9,26 +9,44 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDatabase(builder.Configuration);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddJwtAuth(builder.Configuration);
 builder.Services.AddLocalhostCors();
+
 var app = builder.Build();
 DbInitializer.Initialize(app.Services);
-// Configure the HTTP request pipeline.
+
+// Swagger apenas no ambiente de Dev
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
-app.UseCors("LiberarLocalhost4200");
+
+// Redireciona para HTTPS se configurado (opcional para Cloudflare)
 app.UseHttpsRedirection();
+
+// CORS deve vir cedo, antes dos controllers
+app.UseCors("LiberarLocalhost4200");
+
+// Auth
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Middleware de log (opcional, pode ativar se quiser ver os requests)
 app.UseMiddleware<SimpleRequestLoggingMiddleware>();
 
+// Serve SPA (Angular)
+app.UseDefaultFiles();   // procura index.html
+app.UseStaticFiles();    // JS, CSS, etc
+
+// API controllers
 app.MapControllers();
+
+// Fallback para Angular SPA (evita erro 404 ao recarregar páginas)
+app.MapFallbackToFile("index.html");
 
 app.Run();

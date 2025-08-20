@@ -1,0 +1,125 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\assets\\access-denied.json",
+      "PackagePath": "staticwebassets\\assets\\access-denied.json"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\assets\\logo.svg",
+      "PackagePath": "staticwebassets\\assets\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\assets\\not-approved.json",
+      "PackagePath": "staticwebassets\\assets\\not-approved.json"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\assets\\not-found.json",
+      "PackagePath": "staticwebassets\\assets\\not-found.json"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\assets\\top.ico",
+      "PackagePath": "staticwebassets\\assets\\top.ico"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-6FDRF5ER.js",
+      "PackagePath": "staticwebassets\\chunk-6FDRF5ER.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-CH2VBON7.js",
+      "PackagePath": "staticwebassets\\chunk-CH2VBON7.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-D742RQ7B.js",
+      "PackagePath": "staticwebassets\\chunk-D742RQ7B.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-GGLPSBJN.js",
+      "PackagePath": "staticwebassets\\chunk-GGLPSBJN.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-IMC27PWS.js",
+      "PackagePath": "staticwebassets\\chunk-IMC27PWS.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-KBPPTWF2.js",
+      "PackagePath": "staticwebassets\\chunk-KBPPTWF2.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-MENZY2SY.js",
+      "PackagePath": "staticwebassets\\chunk-MENZY2SY.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-RG2PV7OL.js",
+      "PackagePath": "staticwebassets\\chunk-RG2PV7OL.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-SUMQXGLR.js",
+      "PackagePath": "staticwebassets\\chunk-SUMQXGLR.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-UO6DGOFM.js",
+      "PackagePath": "staticwebassets\\chunk-UO6DGOFM.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-WW7LDCBC.js",
+      "PackagePath": "staticwebassets\\chunk-WW7LDCBC.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-WWHFDCJT.js",
+      "PackagePath": "staticwebassets\\chunk-WWHFDCJT.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\chunk-Y6MLCWWI.js",
+      "PackagePath": "staticwebassets\\chunk-Y6MLCWWI.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\main-5CNJUD75.js",
+      "PackagePath": "staticwebassets\\main-5CNJUD75.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\media\\bootstrap-icons-CVBWLLHT.woff2",
+      "PackagePath": "staticwebassets\\media\\bootstrap-icons-CVBWLLHT.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\media\\bootstrap-icons-VQNJTM6Q.woff",
+      "PackagePath": "staticwebassets\\media\\bootstrap-icons-VQNJTM6Q.woff"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\polyfills-B6TNHZQ6.js",
+      "PackagePath": "staticwebassets\\polyfills-B6TNHZQ6.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\scripts-WL2QHKC5.js",
+      "PackagePath": "staticwebassets\\scripts-WL2QHKC5.js"
+    },
+    {
+      "Id": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\wwwroot\\styles-VALNVX4M.css",
+      "PackagePath": "staticwebassets\\styles-VALNVX4M.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.malharia-back-end.props",
+      "PackagePath": "build\\malharia-back-end.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.malharia-back-end.props",
+      "PackagePath": "buildMultiTargeting\\malharia-back-end.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.malharia-back-end.props",
+      "PackagePath": "buildTransitive\\malharia-back-end.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.malharia-back-end.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,5 +1,6 @@
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\bin\Debug\net8.0\appsettings.json
+C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\bin\Debug\net8.0\malharia-back-end.staticwebassets.runtime.json
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\bin\Debug\net8.0\malharia-back-end.exe
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\bin\Debug\net8.0\malharia-back-end.deps.json
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\bin\Debug\net8.0\malharia-back-end.runtimeconfig.json
@@ -114,6 +115,7 @@ C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debu
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.csproj.CoreCompileInputs.cache
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.sourcelink.json
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\staticwebassets\msbuild.malharia-back-end.Microsoft.AspNetCore.StaticWebAssets.props
@@ -128,4 +130,3 @@ C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debu
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.pdb
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.genruntimeconfig.cache
 C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\ref\malharia-back-end.dll
-C:\Users\Casa\source\repos\malharia\malharia-back-end\malharia-back-end\obj\Debug\net8.0\malharia-back-end.sourcelink.json

@@ -22,7 +22,6 @@ namespace malharia_back_end.Static
 						})
 				);
 
-				// Testa conexão inicial
 				var provider = services.BuildServiceProvider();
 				var db = provider.GetRequiredService<Context>();
 				db.Database.Migrate();
@@ -42,10 +41,13 @@ namespace malharia_back_end.Static
 			{
 				options.AddPolicy("LiberarLocalhost4200", policy =>
 				{
-					policy.WithOrigins("http://localhost:4200")
-						  .AllowAnyMethod()
-						  .AllowAnyHeader()
-						  .AllowCredentials();
+					policy.WithOrigins(
+							"http://localhost:4200",
+							"https://locator-guards-powerful-annex.trycloudflare.com" // adiciona o túnel
+						)
+						.AllowAnyMethod()
+						.AllowAnyHeader()
+						.AllowCredentials();
 				});
 			});
 

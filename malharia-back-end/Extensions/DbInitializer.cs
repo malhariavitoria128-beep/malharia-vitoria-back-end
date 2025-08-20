@@ -28,7 +28,6 @@ namespace malharia_back_end.Static
 					});
 				}
 
-				// Cria User se não existir
 				if (!db.Users.Any(u => u.Role == "Operador"))
 				{
 					db.Users.Add(new User
