@@ -21,9 +21,11 @@ public static class JwtServiceExtensions
 			options.SaveToken = true;
 			options.TokenValidationParameters = new TokenValidationParameters
 			{
-				ValidateIssuer = true,
+				//ValidateIssuer = true,
+				ValidateIssuer = false,
 				ValidIssuer = jwt["Issuer"],
-				ValidateAudience = true,
+				//ValidateAudience = true,
+				ValidateAudience = false,
 				ValidAudience = jwt["Audience"],
 				ValidateIssuerSigningKey = true,
 				IssuerSigningKey = new SymmetricSecurityKey(key),

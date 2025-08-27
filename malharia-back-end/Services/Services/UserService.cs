@@ -35,7 +35,6 @@ namespace malharia_back_end.Services.Services
 				if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
 					return "ERROR_CREDENTIALS";
 
-				// Gerar token
 				var jwt = _config.GetSection("Jwt");
 				var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt["Key"]));
 				var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -62,10 +61,8 @@ namespace malharia_back_end.Services.Services
 			}
 			catch (Exception ex)
 			{
-				// Aqui você pode logar o erro, ex: Serilog
 				Log.Error(ex, "Erro ao autenticar usuário {Email}", email);
 
-				// Retorna valor especial para indicar erro inesperado
 				return "ERROR_UNEXPECTED";
 			}
 		}
@@ -92,7 +89,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao registrar usuário {Email}", email);
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -118,7 +115,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao registrar usuário {Email}", email);
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -135,7 +132,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao alterar senha do usuário ID {UserId}", userId);
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -146,7 +143,6 @@ namespace malharia_back_end.Services.Services
 				var user = await _db.Users.FindAsync(userId)
 						   ?? throw new Exception("Usuário não encontrado.");
 
-				// Bloquear superusuário
 				if (user.Email == "admin@local")
 					throw new Exception("Não é permitido alterar a role do superusuário.");
 
@@ -158,7 +154,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao alterar nível do usuário ID {UserId}", userId);
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -172,7 +168,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao buscar usuários pendentes");
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -186,7 +182,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao buscar usuários aprovados");
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -200,7 +196,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao buscar usuários");
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -219,7 +215,7 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao aprovar usuário ID {UserId}", userId);
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
 
@@ -230,7 +226,6 @@ namespace malharia_back_end.Services.Services
 				var user = await _db.Users.FindAsync(userId)
 						   ?? throw new Exception("Usuário não encontrado.");
 
-				// Bloquear superusuário
 				if (user.Email == "admin@local")
 					throw new Exception("Não é permitido deletar o superusuário.");
 
@@ -242,11 +237,9 @@ namespace malharia_back_end.Services.Services
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Erro ao remover usuário ID {UserId}", userId);
-				throw; // relança para o controller tratar
+				throw; 
 			}
 		}
-
-
 
 	}
 }

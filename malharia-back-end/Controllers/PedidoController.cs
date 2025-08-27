@@ -1,55 +1,69 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using malharia_back_end.Dtos.PedidosDto;
+using malharia_back_end.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace malharia_back_end.Controllers
 {
-	[Authorize(Roles = "Administrador,Operador")]
 	[ApiController]
 	[Route("api/[controller]")]
 	public class PedidoController : ControllerBase
 	{
-		// Lista fake estática para teste
-		private static readonly List<Pedido> Pedidos = new()
-		{
-			new Pedido { Id = 1, Cliente = "Cliente A", Produto = "Camisa Polo", Quantidade = 10, Status = "Em Produção" },
-			new Pedido { Id = 2, Cliente = "Cliente B", Produto = "Calça Jeans", Quantidade = 5, Status = "Finalizado" },
-			new Pedido { Id = 3, Cliente = "Cliente C", Produto = "Jaqueta", Quantidade = 2, Status = "Pendente" },
-		};
+		private readonly IPedidoService _pedidoService;
 
-		[HttpGet]
-		public IActionResult GetPedidos()
+		public PedidoController(IPedidoService pedidoService)
 		{
-			return Ok(Pedidos);
+			_pedidoService = pedidoService;
 		}
 
-		[HttpGet("{id}")]
-		public IActionResult GetPedido(int id)
+		[HttpPost]
+		public async Task<IActionResult> CriarPedido([FromBody] PedidoCriarDto dto)
 		{
-			var pedido = Pedidos.Find(p => p.Id == id);
+			try
+			{
+				if (dto.ClienteId <= 0)
+					return BadRequest(new { success = false, message = "Cliente inválido." });
+
+				// Pode ser uma lista vazia de itens
+				var pedido = await _pedidoService.CriarPedidoAsync(dto);
+				return Ok(pedido);
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, new
+				{
+					success = false,
+					message = "Erro ao criar pedido.",
+					details = ex.Message
+				});
+			}
+		}
+	
+
+		[HttpGet("{numeroPedido}")]
+		public async Task<IActionResult> GetById(string numeroPedido)
+		{
+			var pedido = await _pedidoService.GetByIdAsync(numeroPedido);
 			if (pedido == null)
 				return NotFound();
 
 			return Ok(pedido);
 		}
 
-		// Só Admin pode criar pedido (exemplo)
-		[Authorize(Roles = "Admin")]
-		[HttpPost]
-		public IActionResult CriarPedido([FromBody] Pedido novoPedido)
+		[HttpPut("{id}/adicionar-itens")]
+		public async Task<IActionResult> AdicionarItens(int id, [FromBody] List<ItemPedidoDto> itens)
 		{
-			novoPedido.Id = Pedidos.Count + 1;
-			Pedidos.Add(novoPedido);
-			return CreatedAtAction(nameof(GetPedido), new { id = novoPedido.Id }, novoPedido);
+			try
+			{
+				await _pedidoService.AdicionarItensAsync(id, itens);
+				return Ok(new { message = "Itens adicionados com sucesso." });
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, new { success = false, message = ex.Message });
+			}
 		}
 	}
 
-	public class Pedido
-	{
-		public int Id { get; set; }
-		public string Cliente { get; set; } = null!;
-		public string Produto { get; set; } = null!;
-		public int Quantidade { get; set; }
-		public string Status { get; set; } = null!;
-	}
 }

@@ -7,28 +7,49 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDatabase(builder.Configuration);
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IPedidoService, PedidoService>();
 builder.Services.AddJwtAuth(builder.Configuration);
-builder.Services.AddLocalhostCors();
+
+// CORS já está implementado na extensão AllowFirebase
+builder.Services.AllowFirebase();
+
 var app = builder.Build();
+
+// Inicializa DB
 DbInitializer.Initialize(app.Services);
-// Configure the HTTP request pipeline.
+
+// Middleware customizado
+app.UseMiddleware<SimpleRequestLoggingMiddleware>();
+
+// Swagger em desenvolvimento
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
-app.UseCors("LiberarLocalhost4200");
+
 app.UseHttpsRedirection();
+
+// CORS antes da auth
+app.UseCors("AllowFirebase");
+
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseMiddleware<SimpleRequestLoggingMiddleware>();
 
+// Map controllers SEM mexer no padrão (mas garantindo que a rota tenha "api/...")
 app.MapControllers();
 
+// Servir Angular do wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+// Fallback para Angular SPA
+app.MapFallbackToFile("index.html");
+
 app.Run();
+

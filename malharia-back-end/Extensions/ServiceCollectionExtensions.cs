@@ -22,7 +22,6 @@ namespace malharia_back_end.Static
 						})
 				);
 
-				// Testa conexão inicial
 				var provider = services.BuildServiceProvider();
 				var db = provider.GetRequiredService<Context>();
 				db.Database.Migrate();
@@ -36,20 +35,25 @@ namespace malharia_back_end.Static
 
 			return services;
 		}
-		public static IServiceCollection AddLocalhostCors(this IServiceCollection services)
+		public static IServiceCollection AllowFirebase(this IServiceCollection services)
 		{
 			services.AddCors(options =>
 			{
-				options.AddPolicy("LiberarLocalhost4200", policy =>
+				options.AddPolicy("AllowFirebase", policy =>
 				{
-					policy.WithOrigins("http://localhost:4200")
-						  .AllowAnyMethod()
-						  .AllowAnyHeader()
-						  .AllowCredentials();
+					policy.WithOrigins(
+							"https://malharia-vitoria.web.app",  
+							"https://malharia-vitoria.firebaseapp.com",
+							"http://localhost:4200"
+						)
+						.AllowAnyMethod()
+						.AllowAnyHeader()
+						.AllowCredentials();
 				});
 			});
 
 			return services;
 		}
+
 	}
 }

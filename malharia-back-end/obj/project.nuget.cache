@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QJze/J7yk1A=",
+  "dgSpecHash": "CThfMJbIHpI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Casa\\source\\repos\\malharia\\malharia-back-end\\malharia-back-end\\malharia-back-end.csproj",
+  "projectFilePath": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\malharia-back-end.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Casa\\.nuget\\packages\\aspnetcore.healthchecks.mysql\\8.0.1\\aspnetcore.healthchecks.mysql.8.0.1.nupkg.sha512",
     "C:\\Users\\Casa\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
