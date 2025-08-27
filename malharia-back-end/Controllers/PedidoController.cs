@@ -41,29 +41,44 @@ namespace malharia_back_end.Controllers
 		}
 	
 
-		[HttpGet("{numeroPedido}")]
-		public async Task<IActionResult> GetById(string numeroPedido)
+		[HttpGet("{id}")]
+		public async Task<IActionResult> GetById(int id)
 		{
-			var pedido = await _pedidoService.GetByIdAsync(numeroPedido);
+			var pedido = await _pedidoService.GetByIdAsync(id);
 			if (pedido == null)
 				return NotFound();
 
 			return Ok(pedido);
 		}
 
-		[HttpPut("{id}/adicionar-itens")]
-		public async Task<IActionResult> AdicionarItens(int id, [FromBody] List<ItemPedidoDto> itens)
+		[HttpPut("{id}/adicionar-item")]
+		public async Task<IActionResult> AdicionarItem(int id, [FromBody] ItemPedidoDto item)
 		{
 			try
 			{
-				await _pedidoService.AdicionarItensAsync(id, itens);
-				return Ok(new { message = "Itens adicionados com sucesso." });
+				await _pedidoService.AdicionarItensAsync(id, item);
+				return Ok(new { message = "Item adicionado com sucesso." });
 			}
 			catch (Exception ex)
 			{
 				return StatusCode(500, new { success = false, message = ex.Message });
 			}
 		}
+
+		[HttpPut("{id}/data-entrega")]
+		public async Task<IActionResult> AtualizarDataEntrega(int id, [FromBody] DateTime novaDataEntrega)
+		{
+			try
+			{
+				await _pedidoService.AtualizarDataEntregaAsync(id, novaDataEntrega);
+				return Ok(new { message = "Item adicionado com sucesso." });
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, new { success = false, message = ex.Message });
+			}
+		}
+
 	}
 
 }

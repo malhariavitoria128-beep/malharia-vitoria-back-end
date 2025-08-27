@@ -5,7 +5,8 @@ namespace malharia_back_end.Services.Interfaces
 	public interface IPedidoService
 	{
 		Task<PedidoRespostaDto> CriarPedidoAsync(PedidoCriarDto dto);
-		Task<PedidoRespostaDto> GetByIdAsync(string numeroPedido);
-		Task AdicionarItensAsync(int pedidoId, List<ItemPedidoDto> itens);
+		Task<PedidoRespostaDto> GetByIdAsync(int id);
+		Task AdicionarItensAsync(int pedidoId, ItemPedidoDto itens);
+		Task AtualizarDataEntregaAsync(int pedidoId, DateTime novaDataEntrega);
 	}
 }

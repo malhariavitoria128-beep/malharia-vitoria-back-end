@@ -7,6 +7,8 @@
 		public DateTime DataPedido { get; set; } = DateTime.Now;
 		public decimal ValorTotal { get; set; }
 		public string NumeroPedido { get; set; } = null!;
+		public DateTime? DataEntrega { get; set; }
+		public string Status { get; set; }
 
 		public Cliente Cliente { get; set; } = null!;
 		public ICollection<ItemPedido> Itens { get; set; } = new List<ItemPedido>();

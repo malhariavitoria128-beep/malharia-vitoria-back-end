@@ -62,7 +62,9 @@ namespace malharia_back_end.Services.Services
 				ClienteId = dto.ClienteId,
 				DataPedido = DateTime.Now,
 				ValorTotal = 0,
-				NumeroPedido = numeroPedido
+				NumeroPedido = numeroPedido,
+				Status = "Não iniciado",
+				DataEntrega = null
 			};
 
 			// Adiciona itens apenas se houver
@@ -107,12 +109,12 @@ namespace malharia_back_end.Services.Services
 			};
 		}
 
-		public async Task<PedidoRespostaDto> GetByIdAsync(string numeroPedido)
+		public async Task<PedidoRespostaDto> GetByIdAsync(int id)
 		{
 			var pedido = await _db.Pedidos
 			.Include(p => p.Itens)
 			.Include(p => p.Cliente)  // Inclui o cliente
-			.FirstOrDefaultAsync(p => p.NumeroPedido == numeroPedido);
+			.FirstOrDefaultAsync(p => p.Id == id);
 
 			if (pedido == null)
 				return null!;
@@ -136,11 +138,13 @@ namespace malharia_back_end.Services.Services
 				NomeCliente = pedido.Cliente.Nome,
 				DataPedido = pedido.DataPedido,
 				ValorTotal = pedido.ValorTotal,
+				Status = pedido.Status,
+				DataEntrega = pedido.DataEntrega,
 				Itens = itens
 			};
 		}
 
-		public async Task AdicionarItensAsync(int pedidoId, List<ItemPedidoDto> itens)
+		public async Task AdicionarItensAsync(int pedidoId, ItemPedidoDto itemDto)
 		{
 			var pedido = await _db.Pedidos
 				.Include(p => p.Itens)
@@ -149,27 +153,39 @@ namespace malharia_back_end.Services.Services
 			if (pedido == null)
 				throw new Exception("Pedido não encontrado.");
 
-			foreach (var itemDto in itens)
+			var item = new ItemPedido
 			{
-				var item = new ItemPedido
-				{
-					PedidoId = pedido.Id,
-					Descricao = itemDto.Descricao,
-					Quantidade = itemDto.Quantidade,
-					Tamanho = itemDto.Tamanho,
-					ValorUnitario = itemDto.ValorUnitario,
-					ValorTotal = itemDto.Quantidade * itemDto.ValorUnitario,
-					Imagem = Base64ParaByteArray(itemDto.Imagem)
-				};
+				PedidoId = pedido.Id,
+				Descricao = itemDto.Descricao,
+				Quantidade = itemDto.Quantidade,
+				Tamanho = itemDto.Tamanho,
+				ValorUnitario = itemDto.ValorUnitario,
+				ValorTotal = itemDto.Quantidade * itemDto.ValorUnitario,
+				Imagem = Base64ParaByteArray(itemDto.Imagem)
+			};
 
-				pedido.Itens.Add(item);
-			}
+			pedido.Itens.Add(item);
 
 			// Recalcula o valor total do pedido
 			pedido.ValorTotal = pedido.Itens.Sum(i => i.ValorTotal);
 
 			await _db.SaveChangesAsync();
 		}
+
+		public async Task AtualizarDataEntregaAsync(int pedidoId, DateTime novaDataEntrega)
+		{
+			var pedido = await _db.Pedidos.FindAsync(pedidoId);
+			if (pedido == null)
+			{
+				throw new KeyNotFoundException($"Pedido {pedidoId} não encontrado");
+			}
+
+			pedido.DataEntrega = novaDataEntrega;
+
+			_db.Pedidos.Update(pedido);
+			await _db.SaveChangesAsync();
+		}
+
 	}
 
 
