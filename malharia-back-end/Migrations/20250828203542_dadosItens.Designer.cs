@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using malharia_back_end.Data;
 
@@ -11,9 +12,11 @@ using malharia_back_end.Data;
 namespace malharia_back_end.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20250828203542_dadosItens")]
+    partial class dadosItens
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,12 +92,14 @@ namespace malharia_back_end.Migrations
                     b.Property<int>("PedidoId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Prioridade")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("Prioridade")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Retirada")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("StatusBordado")
                         .IsRequired()
@@ -128,40 +133,27 @@ namespace malharia_back_end.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("StatusSublimacao")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Tamanho")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("TemBordado")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("TemBordado")
+                        .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("TemConferencia")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("TemDtf")
+                        .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("TemCorte")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("TemPintura")
+                        .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("TemCostura")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("TemSilk")
+                        .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("TemDobragem")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TemDtf")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TemPintura")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TemSilk")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("TemSublimacao")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<decimal>("ValorTotal")
                         .HasColumnType("decimal(65,30)");

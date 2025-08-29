@@ -144,6 +144,8 @@ namespace malharia_back_end.Services.Services
 			};
 		}
 
+
+
 		public async Task AdicionarItensAsync(int pedidoId, ItemPedidoDto itemDto)
 		{
 			var pedido = await _db.Pedidos
@@ -161,7 +163,28 @@ namespace malharia_back_end.Services.Services
 				Tamanho = itemDto.Tamanho,
 				ValorUnitario = itemDto.ValorUnitario,
 				ValorTotal = itemDto.Quantidade * itemDto.ValorUnitario,
-				Imagem = Base64ParaByteArray(itemDto.Imagem)
+				Imagem = Base64ParaByteArray(itemDto.Imagem),
+
+				// 🔹 Campos opcionais: se não vier, default para "Não" ou "Não iniciado"
+				Prioridade = itemDto.Prioridade ?? "Não",
+				TemPintura = itemDto.TemPintura ?? "Não",
+				StatusPintura = itemDto.StatusPintura ?? "Não iniciado",
+				TemBordado = itemDto.TemBordado ?? "Não",
+				StatusBordado = itemDto.StatusBordado ?? "Não iniciado",
+				TemDtf = itemDto.TemDtf ?? "Não",
+				StatusDtf = itemDto.StatusDtf ?? "Não iniciado",
+				TemSilk = itemDto.TemSilk ?? "Não",
+				StatusSilk = itemDto.StatusSilk ?? "Não iniciado",
+
+				// 🔹 Etapas obrigatórias: sempre marcadas como "Sim" e status inicial "Não iniciado"
+				TemCorte = "Sim",
+				StatusCorte = "Não iniciado",
+				TemCostura = "Sim",
+				StatusCostura = "Não iniciado",
+				TemDobragem = "Sim",
+				StatusDobragem = "Não iniciado",
+				TemConferencia = "Sim",
+				StatusConferencia = "Não iniciado"
 			};
 
 			pedido.Itens.Add(item);
@@ -171,6 +194,9 @@ namespace malharia_back_end.Services.Services
 
 			await _db.SaveChangesAsync();
 		}
+
+
+
 
 		public async Task AtualizarDataEntregaAsync(int pedidoId, DateTime novaDataEntrega)
 		{
@@ -184,6 +210,59 @@ namespace malharia_back_end.Services.Services
 
 			_db.Pedidos.Update(pedido);
 			await _db.SaveChangesAsync();
+		}
+
+		public async Task<List<PedidoRespostaDto>> GetAsync()
+		{
+			// Busca todos os pedidos incluindo Cliente e Itens
+			var pedidos = await _db.Pedidos
+				.Include(p => p.Itens)
+				.Include(p => p.Cliente)
+				.ToListAsync();
+
+			// Projeta para PedidoRespostaDto
+			var resultado = pedidos.Select(pedido => new PedidoRespostaDto
+			{
+				Id = pedido.Id,
+				NumeroPedido = pedido.NumeroPedido,
+				ClienteId = pedido.ClienteId,
+				NomeCliente = pedido.Cliente.Nome,
+				DataPedido = pedido.DataPedido,
+				ValorTotal = pedido.ValorTotal,
+				Status = pedido.Status,
+				DataEntrega = pedido.DataEntrega,
+				Itens = pedido.Itens.Select(i => new ItemPedidoDto
+				{
+					Descricao = i.Descricao,
+					Quantidade = i.Quantidade,
+					Tamanho = i.Tamanho,
+					ValorUnitario = i.ValorUnitario,
+					Imagem = i.Imagem != null ? Convert.ToBase64String(i.Imagem) : null,
+
+					// Campos opcionais
+					Prioridade = i.Prioridade,
+					TemPintura = i.TemPintura,
+					StatusPintura = i.StatusPintura,
+					TemBordado = i.TemBordado,
+					StatusBordado = i.StatusBordado,
+					TemDtf = i.TemDtf,
+					StatusDtf = i.StatusDtf,
+					TemSilk = i.TemSilk,
+					StatusSilk = i.StatusSilk,
+
+					// Etapas obrigatórias
+					TemCorte = i.TemCorte,
+					StatusCorte = i.StatusCorte,
+					TemCostura = i.TemCostura,
+					StatusCostura = i.StatusCostura,
+					TemDobragem = i.TemDobragem,
+					StatusDobragem = i.StatusDobragem,
+					TemConferencia = i.TemConferencia,
+					StatusConferencia = i.StatusConferencia
+				}).ToList()
+			}).ToList();
+
+			return resultado;
 		}
 
 	}

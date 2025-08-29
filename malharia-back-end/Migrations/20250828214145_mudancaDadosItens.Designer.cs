@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using malharia_back_end.Data;
 
@@ -11,9 +12,11 @@ using malharia_back_end.Data;
 namespace malharia_back_end.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20250828214145_mudancaDadosItens")]
+    partial class mudancaDadosItens
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -132,22 +135,6 @@ namespace malharia_back_end.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("TemBordado")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TemConferencia")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TemCorte")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TemCostura")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("TemDobragem")
                         .IsRequired()
                         .HasColumnType("longtext");
 

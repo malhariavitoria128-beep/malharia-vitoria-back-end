@@ -51,6 +51,13 @@ namespace malharia_back_end.Controllers
 			return Ok(pedido);
 		}
 
+		[HttpGet]
+		public async Task<IActionResult> Get()
+		{
+			var pedidos = await _pedidoService.GetAsync();
+			return Ok(pedidos);
+		}
+
 		[HttpPut("{id}/adicionar-item")]
 		public async Task<IActionResult> AdicionarItem(int id, [FromBody] ItemPedidoDto item)
 		{
