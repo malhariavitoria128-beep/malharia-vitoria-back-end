@@ -144,8 +144,6 @@ namespace malharia_back_end.Services.Services
 			};
 		}
 
-
-
 		public async Task AdicionarItensAsync(int pedidoId, ItemPedidoDto itemDto)
 		{
 			var pedido = await _db.Pedidos
@@ -184,7 +182,9 @@ namespace malharia_back_end.Services.Services
 				TemDobragem = "Sim",
 				StatusDobragem = "Não iniciado",
 				TemConferencia = "Sim",
-				StatusConferencia = "Não iniciado"
+				StatusConferencia = "Não iniciado",
+				TemRetirada = "Sim",
+				StatusRetirada = "Não iniciado"
 			};
 
 			pedido.Itens.Add(item);
@@ -194,9 +194,6 @@ namespace malharia_back_end.Services.Services
 
 			await _db.SaveChangesAsync();
 		}
-
-
-
 
 		public async Task AtualizarDataEntregaAsync(int pedidoId, DateTime novaDataEntrega)
 		{
@@ -233,6 +230,7 @@ namespace malharia_back_end.Services.Services
 				DataEntrega = pedido.DataEntrega,
 				Itens = pedido.Itens.Select(i => new ItemPedidoDto
 				{
+					Id = i.Id,
 					Descricao = i.Descricao,
 					Quantidade = i.Quantidade,
 					Tamanho = i.Tamanho,
@@ -258,11 +256,57 @@ namespace malharia_back_end.Services.Services
 					TemDobragem = i.TemDobragem,
 					StatusDobragem = i.StatusDobragem,
 					TemConferencia = i.TemConferencia,
-					StatusConferencia = i.StatusConferencia
+					StatusConferencia = i.StatusConferencia,
+					TemRetirada = i.TemRetirada,
+					StatusRetirada = i.StatusRetirada
 				}).ToList()
 			}).ToList();
 
 			return resultado;
+		}
+
+		public async Task AtualizarItemAsync(int itemId, AtualizarStatusItemDto dto)
+		{
+			var item = await _db.ItensPedidos.FirstOrDefaultAsync(i => i.Id == itemId);
+
+			if (item == null)
+				throw new Exception("Item não encontrado.");
+
+			switch (dto.Campo.ToLower())
+			{
+				case "statuspintura":
+					item.StatusPintura = dto.Valor;
+					break;
+				case "statusbordado":
+					item.StatusBordado = dto.Valor;
+					break;
+				case "statusdtf":
+					item.StatusDtf = dto.Valor;
+					break;
+				case "statussilk":
+					item.StatusSilk = dto.Valor;
+					break;
+				case "statuscorte":
+					item.StatusCorte = dto.Valor;
+					break;
+				case "statuscostura":
+					item.StatusCostura = dto.Valor;
+					break;
+				case "statusdobragem":
+					item.StatusDobragem = dto.Valor;
+					break;
+				case "statusconferencia":
+					item.StatusConferencia = dto.Valor;
+					break;
+				case "statusretirada":
+					item.StatusRetirada = dto.Valor;
+					break;
+
+				default:
+					throw new Exception($"Campo '{dto.Campo}' não é válido para atualização de status.");
+			}
+
+			await _db.SaveChangesAsync();
 		}
 
 	}

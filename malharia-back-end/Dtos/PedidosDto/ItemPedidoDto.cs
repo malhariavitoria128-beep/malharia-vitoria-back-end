@@ -4,6 +4,7 @@ namespace malharia_back_end.Dtos.PedidosDto
 {
 	public record ItemPedidoDto
 	{
+		public int Id { get; set; }
 		[MaxLength(2000)]
 		public string Descricao { get; set; } = null!;
 
@@ -41,6 +42,9 @@ namespace malharia_back_end.Dtos.PedidosDto
 
 		public string? TemConferencia { get; set; }
 		public string? StatusConferencia { get; set; }
+
+		public string? TemRetirada { get; set; }
+		public string? StatusRetirada { get; set; }
 	}
 
 

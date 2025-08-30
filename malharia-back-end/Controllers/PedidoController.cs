@@ -86,6 +86,21 @@ namespace malharia_back_end.Controllers
 			}
 		}
 
+		[HttpPut("itens/{itemId}/atualizar")]
+		public async Task<IActionResult> AtualizarItem(int itemId,[FromBody] AtualizarStatusItemDto dto)
+		{
+			try
+			{
+				await _pedidoService.AtualizarItemAsync(itemId, dto);
+				return Ok(new { message = "Item atualizado com sucesso." });
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, new { success = false, message = ex.Message });
+			}
+		}
+
+
 	}
 
 }

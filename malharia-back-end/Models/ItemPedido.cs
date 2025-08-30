@@ -34,6 +34,9 @@
 		public string? TemConferencia { get; set; }
 		public string? StatusConferencia { get; set; }
 
+		public string? TemRetirada { get; set; }
+		public string? StatusRetirada { get; set; }
+
 		public byte[]? Imagem { get; set; }
 
 		public Pedido Pedido { get; set; } = null!;
