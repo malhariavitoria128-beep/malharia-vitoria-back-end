@@ -309,7 +309,140 @@ namespace malharia_back_end.Services.Services
 			await _db.SaveChangesAsync();
 		}
 
-	}
+		public async Task<List<PedidoRespostaDto>> GetConcluidosAsync()
+		{
+			var pedidos = await _db.Pedidos
+				.Include(p => p.Itens)
+				.Include(p => p.Cliente)
+				.ToListAsync();
 
+			var pedidosConcluidos = pedidos
+				.Where(p => p.Itens.All(i =>
+					(i.TemCorte != "Sim" || i.StatusCorte == "Concluído") &&
+					(i.TemCostura != "Sim" || i.StatusCostura == "Concluído") &&
+					(i.TemDobragem != "Sim" || i.StatusDobragem == "Concluído") &&
+					(i.TemConferencia != "Sim" || i.StatusConferencia == "Concluído") &&
+					(i.TemRetirada != "Sim" || i.StatusRetirada == "Concluído") &&
+					(i.TemPintura != "Sim" || i.StatusPintura == "Concluído") &&
+					(i.TemBordado != "Sim" || i.StatusBordado == "Concluído") &&
+					(i.TemDtf != "Sim" || i.StatusDtf == "Concluído") &&
+					(i.TemSilk != "Sim" || i.StatusSilk == "Concluído")
+				))
+				.ToList();
+
+			var resultado = pedidosConcluidos.Select(pedido => new PedidoRespostaDto
+			{
+				Id = pedido.Id,
+				NumeroPedido = pedido.NumeroPedido,
+				ClienteId = pedido.ClienteId,
+				NomeCliente = pedido.Cliente?.Nome ?? "Cliente não informado",
+				DataPedido = pedido.DataPedido,
+				ValorTotal = pedido.ValorTotal,
+				Status = pedido.Status ?? "Desconhecido",
+				DataEntrega = pedido.DataEntrega,
+
+				Itens = pedido.Itens.Select(i => new ItemPedidoDto
+				{
+					Id = i.Id,
+					Descricao = i.Descricao ?? string.Empty,
+					Quantidade = i.Quantidade,
+					Tamanho = i.Tamanho ?? string.Empty,
+					ValorUnitario = i.ValorUnitario,
+					Imagem = i.Imagem != null ? Convert.ToBase64String(i.Imagem) : null,
+
+					Prioridade = i.Prioridade,
+					TemPintura = i.TemPintura,
+					StatusPintura = i.StatusPintura ?? "Não definido",
+					TemBordado = i.TemBordado,
+					StatusBordado = i.StatusBordado ?? "Não definido",
+					TemDtf = i.TemDtf,
+					StatusDtf = i.StatusDtf ?? "Não definido",
+					TemSilk = i.TemSilk,
+					StatusSilk = i.StatusSilk ?? "Não definido",
+
+					TemCorte = i.TemCorte,
+					StatusCorte = i.StatusCorte ?? "Não definido",
+					TemCostura = i.TemCostura,
+					StatusCostura = i.StatusCostura ?? "Não definido",
+					TemDobragem = i.TemDobragem,
+					StatusDobragem = i.StatusDobragem ?? "Não definido",
+					TemConferencia = i.TemConferencia,
+					StatusConferencia = i.StatusConferencia ?? "Não definido",
+					TemRetirada = i.TemRetirada,
+					StatusRetirada = i.StatusRetirada ?? "Não definido"
+				}).ToList()
+			}).ToList();
+
+			return resultado;
+		}
+
+		public async Task<List<PedidoRespostaDto>> GetNaoConcluidosAsync()
+		{
+			var pedidos = await _db.Pedidos
+				.Include(p => p.Itens)
+				.Include(p => p.Cliente)
+				.ToListAsync();
+
+			var pedidosConcluidos = pedidos
+				.Where(p => p.Itens.Any(i =>
+					(i.TemCorte == "Sim" && i.StatusCorte != "Concluído") ||
+					(i.TemCostura == "Sim" && i.StatusCostura != "Concluído") ||
+					(i.TemDobragem == "Sim" && i.StatusDobragem != "Concluído") ||
+					(i.TemConferencia == "Sim" && i.StatusConferencia != "Concluído") ||
+					(i.TemRetirada == "Sim" && i.StatusRetirada != "Concluído") ||
+					(i.TemPintura == "Sim" && i.StatusPintura != "Concluído") ||
+					(i.TemBordado == "Sim" && i.StatusBordado != "Concluído") ||
+					(i.TemDtf == "Sim" && i.StatusDtf != "Concluído") ||
+					(i.TemSilk == "Sim" && i.StatusSilk != "Concluído")
+				))
+				.ToList();
+
+			var resultado = pedidosConcluidos.Select(pedido => new PedidoRespostaDto
+			{
+				Id = pedido.Id,
+				NumeroPedido = pedido.NumeroPedido,
+				ClienteId = pedido.ClienteId,
+				NomeCliente = pedido.Cliente?.Nome ?? "Cliente não informado",
+				DataPedido = pedido.DataPedido,
+				ValorTotal = pedido.ValorTotal,
+				Status = pedido.Status ?? "Desconhecido",
+				DataEntrega = pedido.DataEntrega,
+
+				Itens = pedido.Itens.Select(i => new ItemPedidoDto
+				{
+					Id = i.Id,
+					Descricao = i.Descricao ?? string.Empty,
+					Quantidade = i.Quantidade,
+					Tamanho = i.Tamanho ?? string.Empty,
+					ValorUnitario = i.ValorUnitario,
+					Imagem = i.Imagem != null ? Convert.ToBase64String(i.Imagem) : null,
+
+					Prioridade = i.Prioridade,
+					TemPintura = i.TemPintura,
+					StatusPintura = i.StatusPintura ?? "Não definido",
+					TemBordado = i.TemBordado,
+					StatusBordado = i.StatusBordado ?? "Não definido",
+					TemDtf = i.TemDtf,
+					StatusDtf = i.StatusDtf ?? "Não definido",
+					TemSilk = i.TemSilk,
+					StatusSilk = i.StatusSilk ?? "Não definido",
+
+					TemCorte = i.TemCorte,
+					StatusCorte = i.StatusCorte ?? "Não definido",
+					TemCostura = i.TemCostura,
+					StatusCostura = i.StatusCostura ?? "Não definido",
+					TemDobragem = i.TemDobragem,
+					StatusDobragem = i.StatusDobragem ?? "Não definido",
+					TemConferencia = i.TemConferencia,
+					StatusConferencia = i.StatusConferencia ?? "Não definido",
+					TemRetirada = i.TemRetirada,
+					StatusRetirada = i.StatusRetirada ?? "Não definido"
+				}).ToList()
+			}).ToList();
+
+			return resultado;
+		}
+
+	}
 
 }

@@ -58,6 +58,20 @@ namespace malharia_back_end.Controllers
 			return Ok(pedidos);
 		}
 
+		[HttpGet("nao-concluidos")]
+		public async Task<IActionResult> GetNãoConcluidos()
+		{
+			var pedidos = await _pedidoService.GetNaoConcluidosAsync();
+			return Ok(pedidos);
+		}
+
+		[HttpGet("concluidos")]
+		public async Task<IActionResult> GetConcluidos()
+		{
+			var pedidos = await _pedidoService.GetConcluidosAsync();
+			return Ok(pedidos);
+		}
+
 		[HttpPut("{id}/adicionar-item")]
 		public async Task<IActionResult> AdicionarItem(int id, [FromBody] ItemPedidoDto item)
 		{

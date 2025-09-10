@@ -311,6 +311,16 @@
   },
   {
     "ContainingType": "malharia_back_end.Controllers.PedidoController",
+    "Method": "GetConcluidos",
+    "RelativePath": "api/Pedido/concluidos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "malharia_back_end.Controllers.PedidoController",
     "Method": "AtualizarItem",
     "RelativePath": "api/Pedido/itens/{itemId}/atualizar",
     "HttpMethod": "PUT",
@@ -328,6 +338,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "malharia_back_end.Controllers.PedidoController",
+    "Method": "GetN\u00E3oConcluidos",
+    "RelativePath": "api/Pedido/nao-concluidos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

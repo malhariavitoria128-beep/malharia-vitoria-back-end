@@ -433,6 +433,30 @@
         }
       }
     },
+    "/api/Pedido/nao-concluidos": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Pedido/concluidos": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Pedido/{id}/adicionar-item": {
       "put": {
         "tags": [

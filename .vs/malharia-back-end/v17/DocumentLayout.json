@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\services\\services\\pedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\services\\services\\pedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\dtos\\pedidosdto\\itempedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\dtos\\pedidosdto\\itempedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\services\\interfaces\\ipedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\services\\interfaces\\ipedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\dtos\\pedidosdto\\itempedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\dtos\\pedidosdto\\itempedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\models\\itempedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\dtos\\pedidosdto\\atualizarstatusitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\dtos\\pedidosdto\\atualizarstatusitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\data\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\malharia-back-end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\malharia-back-end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\dtos\\userdtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\dtos\\userdtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|solutionrelative:malharia-back-end\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC3D2CC-7416-404F-8D5F-CEC61ACA6E36}|malharia-back-end\\malharia-back-end.csproj|c:\\users\\casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\dtos\\clientesdtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -214,20 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AtualizarStatusItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
-              "RelativeDocumentMoniker": "malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
-              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
-              "RelativeToolTip": "malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:54:14.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "20250829153351_incluirRetirada.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Migrations\\20250829153351_incluirRetirada.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Migrations\\20250829153351_incluirRetirada.cs",
@@ -239,33 +226,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PedidoService.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Services\\PedidoService.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Services\\Services\\PedidoService.cs",
               "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Services\\PedidoService.cs",
               "RelativeToolTip": "malharia-back-end\\Services\\Services\\PedidoService.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAA3wOgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAIBCwLsBAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T23:41:14.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "PedidoController.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\PedidoController.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Controllers\\PedidoController.cs",
               "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\PedidoController.cs",
               "RelativeToolTip": "malharia-back-end\\Controllers\\PedidoController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAABCwFkAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAA2wDwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-13T17:14:02.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Models\\Cliente.cs",
@@ -277,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ItemPedidoDto.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\PedidosDto\\ItemPedidoDto.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Dtos\\PedidosDto\\ItemPedidoDto.cs",
@@ -285,12 +272,11 @@
               "RelativeToolTip": "malharia-back-end\\Dtos\\PedidosDto\\ItemPedidoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T23:38:08.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T23:38:08.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Controllers\\AdminController.cs",
@@ -302,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Models\\Pedido.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Models\\Pedido.cs",
@@ -314,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "PedidoCriarDto.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\PedidosDto\\PedidoCriarDto.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Dtos\\PedidosDto\\PedidoCriarDto.cs",
@@ -326,20 +312,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "IPedidoService.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Interfaces\\IPedidoService.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Services\\Interfaces\\IPedidoService.cs",
               "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Interfaces\\IPedidoService.cs",
               "RelativeToolTip": "malharia-back-end\\Services\\Interfaces\\IPedidoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T23:40:14.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "PedidoRespostaDto.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\PedidosDto\\PedidoRespostaDto.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Dtos\\PedidosDto\\PedidoRespostaDto.cs",
@@ -351,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ItemPedido.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Models\\ItemPedido.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Models\\ItemPedido.cs",
@@ -359,12 +345,49 @@
               "RelativeToolTip": "malharia-back-end\\Models\\ItemPedido.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T23:12:20.973Z",
+              "WhenOpened": "2025-08-22T23:12:20.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Services\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Services\\UserService.cs",
+              "RelativeToolTip": "malharia-back-end\\Services\\Services\\UserService.cs",
+              "ViewState": "AgIAANoAAAAAAAAAAAAqwPEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T16:57:22.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "malharia-back-end\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:00:36.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AtualizarStatusItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
+              "RelativeDocumentMoniker": "malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
+              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
+              "RelativeToolTip": "malharia-back-end\\Dtos\\PedidosDto\\AtualizarStatusItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:54:14.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ClienteService.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Services\\ClienteService.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Services\\Services\\ClienteService.cs",
@@ -372,12 +395,11 @@
               "RelativeToolTip": "malharia-back-end\\Services\\Services\\ClienteService.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAA3wKcAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T19:55:19.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T19:55:19.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Context.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Data\\Context.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Data\\Context.cs",
@@ -389,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Controllers\\ClienteController.cs",
@@ -401,19 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "malharia-back-end\\Services\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Services\\UserService.cs",
-              "RelativeToolTip": "malharia-back-end\\Services\\Services\\UserService.cs",
-              "ViewState": "AgIAANoAAAAAAAAAAAAqwPEAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T16:57:22.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Program.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Program.cs",
@@ -425,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "malharia-back-end.csproj",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\malharia-back-end.csproj",
               "RelativeDocumentMoniker": "malharia-back-end\\malharia-back-end.csproj",
@@ -461,7 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Services\\Interfaces\\IUserService.cs",
@@ -485,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "IClienteService.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Services\\Interfaces\\IClienteService.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Services\\Interfaces\\IClienteService.cs",
@@ -509,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Models\\User.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Models\\User.cs",
@@ -533,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ChangePasswordDto.cs",
               "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Dtos\\UserDtos\\ChangePasswordDto.cs",
               "RelativeDocumentMoniker": "malharia-back-end\\Dtos\\UserDtos\\ChangePasswordDto.cs",
@@ -542,18 +552,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T14:18:11.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "malharia-back-end\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Casa\\source\\repos\\malharia\\prod\\malharia-back-end\\malharia-back-end\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "malharia-back-end\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAA3wEoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T17:00:36.062Z"
             },
             {
               "$type": "Document",
